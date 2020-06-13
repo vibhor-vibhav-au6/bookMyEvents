@@ -5,13 +5,13 @@ const session = require('express-session')
 const apiRoute = require('./routes/apiRoute')
 const methodOverride = require('method-override')
 const port = process.env.PORT || 1234
-const code = process.env.SECRET
+// const code = process.env.SECRET
 const path = require('path')
 require('./db')
 app.use(express.urlencoded({extended:false}))
 app.use(session({
     name:'BookMyEvents',
-    secret: code,
+    secret: 'vibhor',
     resave: false,
     saveUninitialized: true,
     cookie: 
